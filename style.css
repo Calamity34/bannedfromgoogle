@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+p{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+@keyframes AnimationName {
+    0%{position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes spinning {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  }
+
+.spin {
+    animation-name: spinning;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+    animation-timing-function: linear;
+}
+
+img {
+    width: 5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;;
+  background: linear-gradient(270deg, #f55959, #d98f28, #e4c207, #61c51e, #34aa96, #4c9efd, #d26df0);
+  background-size: 1400% 1400%;
+  animation: AnimationName 50s ease infinite;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
