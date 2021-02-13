@@ -7,6 +7,26 @@
     <title>BANNED</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="glogo.png" type="image/x-icon">
+    <script>
+        function onKonamiCode(cb) {
+            var input = '';
+            var key = '38384040373937396665';
+            document.addEventListener('keydown', function (e) {
+                input += ("" + e.keyCode);
+                if (input === key) {
+                    return cb();
+                }
+                if (!key.indexOf(input)) return;
+                input = ("" + e.keyCode);
+            });
+        }
+        onKonamiCode(function () {window.open('https://youtu.be/cB4dYfFgaME?t=11', "_blank")})
+
+        function filename() {
+            var name = document.getElementById('import');
+            document.getElementById('selectedfile').innerHTML = name.files.item(0).name;
+        };
+    </script>
 </head>
 <body>
     <img class="spin" src="glogo.png" alt="google logo">
